@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Room Booking</title>
+</head>
+<body bgcolor="Gainsboro">
+    <h1 align="center"><u>Prediction of Hotel Room Booking by Customer</u></h1>
+    <h1 align="center"><u>Please fill all the details & then click "SUBMIT" button</u></h1>
+    {% if label %}
+        {% if label==1  %}
+            <h3 align = "center" style="color:green">Customer will CheckIn to the Hotel Room!</h3>
+        {% else %}
+            <h3 align = "center" style="color:red">Customer will not CheckIn to the Hotel Room!</h3> 
+        {% endif %}
+    {% endif %}
+     
+    <form action="/predict" method="POST">
+        <h3 align="center"><label for="Nationality">Nation of the Customer:</label></h3>
+        <h4 align="center"><select id="myTextBox1" name="Nationality">
+            <option value="" disabled selected>Select Customer Country</option>
+            <option value="0">ABW - Aruba</option>
+            <option value="1">AGO - Angola</option>
+            <option value="2">AIA - Anguilla</option>
+            <option value="3">ALB - Albania</option>
+            <option value="4">AND - Andorra</option>
+            <option value="5">ARE - United Arab Emirates</option>
+            <option value="6">ARG - Argentina</option>
+            <option value="7">ARM - Armenia</option>
+            <option value="8">ASM - American Samoa</option>
+            <option value="9">ATA - Antarctica</option>
+            <option value="10">ATF - French Southern Territories</option>
+            <option value="11">ATG - Antigua and Barbuda</option>
+            <option value="12">AUS - Australia</option>
+            <option value="13">AUT - Austria</option>
+            <option value="14">AZE - Azerbaijan</option>
+            <option value="15">BEL - Belgium</option>
+            <option value="16">BEN - Benin</option>
+            <option value="17">BGD - Bangladesh</option>
+            <option value="18">BGR - Bulgaria</option>
+            <option value="19">BHR - Bahrain</option>
+            <option value="20">BHS - The Bahamas</option>
+            <option value="21">BIH - Bosnia and Herzegovina</option>
+            <option value="22">BLR - Belarus</option>
+            <option value="23">BOL - Bolivia</option>
+            <option value="24">BRA - Brazil</option>
+            <option value="25">BRB - Barbados</option>
+            <option value="26">BWA - Botswana</option>
+            <option value="27">CAF - Central African Republic</option>
+            <option value="28">CAN - Canada</option>
+            <option value="29">CHE - Switzerland</option>
+            <option value="30">CHL - Chile</option>
+            <option value="31">CHN - China</option>
+            <option value="32">CIV - Ivory Coast</option>
+            <option value="33">CMR - Cameroon</option>
+            <option value="34">COD - Democratic Republic of the Congo</option>
+            <option value="35">COL - Colombia</option>
+            <option value="36">COM - Comoros</option>
+            <option value="37">CPV - Cape Verde</option>
+            <option value="38">CRI - Costa Rica</option>
+            <option value="39">CUB - Cuba</option>
+            <option value="40">CYM - Cayman Islands</option>
+            <option value="41">CYP - Cyprus</option>
+            <option value="42">CZE - The Czech Republic</option>
+            <option value="43">DEU - Germany</option>
+            <option value="44">DMA - Dominica</option>
+            <option value="45">DNK - Denmark</option>
+            <option value="46">DOM - Dominican Republic</option>
+            <option value="47">DZA - Algeria</option>
+            <option value="48">ECU - Ecuador</option>
+            <option value="49">EGY - Eygpt</option>
+            <option value="50">ERI - Eritrea</option>
+            <option value="51">ESP - Spain</option>
+            <option value="52">EST - Estonia</option>
+            <option value="53">ETH - Ethiopia</option>
+            <option value="54">FIN - Finland</option>
+            <option value="55">FJI - Fiji</option>
+            <option value="56">FLK - Falkland Islands (Islas Malvinas)</option>
+            <option value="57">FRA - France</option>
+            <option value="58">FRO - Faroe Islands</option>
+            <option value="59">GAB - Gabon</option>
+            <option value="60">GBR - United Kingdom</option>
+            <option value="61">GEO - Georgia</option>
+            <option value="62">GHA - Ghana</option>
+            <option value="63">GIB - Gibraltar</option>
+            <option value="64">GIN - Guinea</option>
+            <option value="65">GNB - Guinea-Bissau</option>
+            <option value="66">GNQ - Equatorial Guinea</option>
+            <option value="67">GRC - Greece</option>
+            <option value="68">GTM - Guatemala</option>
+            <option value="69">GUF - French Guiana</option>
+            <option value="70">GUY - Guyana</option>
+            <option value="71">HKG - Hong Kong</option>
+            <option value="72">HRV - Croatia</option>
+            <option value="73">HTI - Haiti</option>
+            <option value="74">HUN - Hungary</option>
+            <option value="75">IDN - Indonesia</option>
+            <option value="76">IND - India</option>
+            <option value="77">IOT - British Indian Ocean Territory</option>
+            <option value="78">IRL - Ireland</option>
+            <option value="79">IRN - Iran</option>
+            <option value="80">IRQ - Iraq</option>
+            <option value="81">ISL - Iceland</option>
+            <option value="82">ISR - Israel</option>
+            <option value="83">ITA - Italy</option>
+            <option value="84">JAM - Jamaica</option>
+            <option value="85">JEY - Jersey</option>
+            <option value="86">JOR - Jordan</option>
+            <option value="87">JPN - Japan</option>
+            <option value="88">KAZ - Kazakhstan</option>
+            <option value="89">KEN - Kenya</option>
+            <option value="90">KGZ - Kyrgyzstan</option>
+            <option value="91">KIR - Kiribati</option>
+            <option value="92">KNA - Saint Kitts and Nevis</option>
+            <option value="93">KOR - South Korea</option>
+            <option value="94">KWT - Kuwait</option>
+            <option value="95">LAO - Laos</option>
+            <option value="96">LBN - Lebanon</option>
+            <option value="97">LBY - Libya</option>
+            <option value="98">LCA - Saint Lucia</option>
+            <option value="99">LIE - Liechtenstein</option>
+            <option value="100">LKA - Sri Lanka</option>
+            <option value="101">LTU - Lithuania</option>
+            <option value="102">LUX - Luxembourg</option>
+            <option value="103">LVA - Latvia</option>
+            <option value="104">MAR - Morocco</option>
+            <option value="105">MCO - Monaco</option>
+            <option value="106">MDG - Madagascar</option>
+            <option value="107">MDV - Maldives</option>
+            <option value="108">MEX - Mexico</option>
+            <option value="109">MKD - North Macedonia</option>
+            <option value="110">MLI - Mali</option>
+            <option value="111">MLT - Malta</option>
+            <option value="112">MMR - Myanmar (Burma)</option>
+            <option value="113">MNE - Montenegro</option>
+            <option value="114">MOZ - Mozambique</option>
+            <option value="115">MRT - Mauritania</option>
+            <option value="116">MUS - Mauritius</option>
+            <option value="117">MWI - Malawi</option>
+            <option value="118">MYS - Malaysia</option>
+            <option value="119">NAM - Namibia</option>
+            <option value="120">NCL - New Caledonia</option>
+            <option value="121">NGA - Nigeria</option>
+            <option value="122">NIC - Nicaragua</option>
+            <option value="123">NLD - Netherlands</option>
+            <option value="124">NOR - Norway</option>
+            <option value="125">NPL - Nepal</option>
+            <option value="126">NRU - Nauru</option>
+            <option value="127">NZL - New Zealand</option>
+            <option value="128">OMN - Oman</option>
+            <option value="129">PAK - Pakistan</option>
+            <option value="130">PAN - Panama</option>
+            <option value="131">PCN - Pitcairn Islands</option>
+            <option value="132">PER - Peru</option>
+            <option value="133">PHL - Philippines</option>
+            <option value="134">PNG - Papua New Guinea</option>
+            <option value="135">POL - Poland</option>
+            <option value="136">PRI - Puerto Rico</option>
+            <option value="137">PRT - Portugal</option>
+            <option value="138">PRY - Paraguay</option>
+            <option value="139">PYF - French Polynesia</option>
+            <option value="140">QAT - Qatar</option>
+            <option value="141">ROU - Romania</option>
+            <option value="142">RUS - Russia</option>
+            <option value="143">RWA - Rwanda</option>
+            <option value="144">SAU - Saudi Arabia</option>
+            <option value="145">SDN - Sudan</option>
+            <option value="146">SEN - Senegal</option>
+            <option value="147">SGP - Singapore</option>
+            <option value="148">SLE - Sierra Leone</option>
+            <option value="149">SLV - EI Salvador</option>
+            <option value="150">SMR - San Marino</option>
+            <option value="151">SOM - Somalia</option>
+            <option value="152">SPM - Saint Pierre and Miquelon</option>
+            <option value="153">SRB - Serbia</option>
+            <option value="154">STP - Sao Tome and Principe</option>
+            <option value="155">SUR - Suriname</option>
+            <option value="156">SVK - Slovakia</option>
+            <option value="157">SVN - Slovenia</option>
+            <option value="158">SWE - Sweden</option>
+            <option value="159">SWZ - Eswatini</option>
+            <option value="160">SYC - Seychelles</option>
+            <option value="161">SYR - Syria</option>
+            <option value="162">TCD - Chad</option>
+            <option value="163">TGO - Togo</option>
+            <option value="164">THA - Thailand</option>
+            <option value="165">TJK - Tajikistan</option>
+            <option value="166">TKM - Turkmenistan</option>
+            <option value="167">TMP - East Timor</option>
+            <option value="168">TON - Tonga</option>
+            <option value="169">TUN - Tunisia</option>
+            <option value="170">TUR - Turkey</option>
+            <option value="171">TWN - Taiwan</option>
+            <option value="172">TZA - Tanzania</option>
+            <option value="173">UGA - Uganda</option>
+            <option value="174">UKR - Ukraine</option>
+            <option value="175">UMI - United States Minor Outlying Islands</option>
+            <option value="176">URY - Uruguay</option>
+            <option value="177">USA - United States</option>
+            <option value="178">UZB - Uzbekistan</option>
+            <option value="179">VCT - Saint Vincent and the Grenadines</option>
+            <option value="180">VEN - Venezuela</option>
+            <option value="181">VIR - U.S. Virgin Islands</option>
+            <option value="182">VNM - Vietnam</option>
+            <option value="183">WLF - Wallis and Futuna</option>
+            <option value="184">WSM - Samoa</option>
+            <option value="185">YEM - Yemen</option>
+            <option value="186">ZAF - South Africa</option>
+            <option value="187">ZWE - Zimbabwe</option>   
+        </select></h4>
+        <br>
+        <h3 align="center"><label for = 'Age'>Customers Age:</label></h3><h4 align="center"><input step="0.5" min="1" max="200" type = 'number' id = 'myTextBox1' name = 'Age' style="height: 15px ; width: 300px;" placeholder="Enter Age in Years"></h4>
+        <br>
+        <h3 align="center"><label for = 'AverageLeadTime'>Average Time taken to checkin by the customer after booking the Room:</label></h3><h4 align="center"><input step="0.5" min="0" max="100" type = 'number' id = 'myTextBox1' name = 'AverageLeadTime' style="height: 15px ; width: 300px;" placeholder="Enter the Average Time taken to checkin in Hours"></h4>
+        <br>
+        <h3 align="center"><label for = 'LodgingRevenue'>Lodging Revenue generated by the Hotel:</label></h3><h4 align="center"><input step="0.01" min="0" max="10000" type = 'number' id = 'myTextBox1' name = 'LodgingRevenue' style="height: 15px ; width: 300px;" placeholder="Enter the Lodging Revenue in Dollars($)"></h4>
+        <br>
+        <h3 align="center"><label for = 'OtherRevenue'>Other Revenues generated by the Hotel:</label></h3><h4 align="center"><input step="0.01" min="0" max="10000" type = 'number' id = 'myTextBox1' name = 'OtherRevenue' style="height: 15px ; width: 300px;" placeholder="Enter the Other Revenues in Dollars($)"></h4>
+        <br>
+        <h3 align="center"><label for = 'RoomNights'>Number of nights spent in room by the customer:</label></h3><h4 align="center"><input step="1" min="0" max="10000" type = 'number' id = 'myTextBox1' name = 'RoomNights' style="height: 15px ; width: 300px;" placeholder="Enter the number of Room Nights"></h4>
+        <br>
+        <h3 align="center"><label for = 'DaysSinceFirstStay'>Number of Days spent by the Customer since Firststay:</label></h3><h4 align="center"><input step="1" min="0" max="10000" type = 'number' id = 'myTextBox1' name = 'DaysSinceFirstStay' style="height: 15px ; width: 300px;" placeholder="Enter the duration in days"></h4>
+        <br>
+        <h3 align="center"><label for="SRHighFloor" style="height: 15px ; width: 300px;">Floor choosen by the customer:</label></h3><!--<h4 align="center"><input step="1" min="0" max="1" type = 'number' id = 'myTextBox1' name = 'SRHighFloor' style="height: 15px ; width: 300px;" placeholder="Ground Floor(0) OR First Floor(1)"></h4>-->
+        <h4 align="center"><select id="myTextBox1" name="SRHighFloor">
+            <option value="" disabled selected>Select the Floor</option>
+            <option value="0">Ground Floor</option>
+            <option value="1">First Floor</option>
+        </select></h4>
+        <br>
+        <h3 align="center"><label for="SRCrib">Whether crib was opted by the customer:</label></h3><!--<h4 align="center"><input step="1" min="0" max="1" type = 'number' id = 'myTextBox1' name = 'SRCrib' style="height: 15px ; width: 300px;" placeholder="Yes(1) OR No(0)"></h4>-->
+        <h4 align="center"><select id="myTextBox1" name="SRCrib">
+            <option value="" disabled selected>Yes (OR) NO</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select></h4>
+        <br>
+        <h3 align="center"><label for="SRTwinBed">Whether Twin Bed was choosen by the customer:</label></h3><!--<h4 align="center"><input step="1" min="0" max="1" type = 'number' id = 'myTextBox1' name = 'SRTwinBed' style="height: 15px ; width: 300px;" placeholder="Yes(1) OR No(0)"></h4>-->
+        <h4 align="center"><select id="myTextBox1" name="SRTwinBed">
+            <option value="" disabled selected>Yes (OR) NO</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select></h4>
+        <br>
+        <h4 align="center"><button>SUBMIT</button></h4>
+    </form>
+    
+    
+    
+</body>
+</html>
