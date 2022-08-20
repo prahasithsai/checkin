@@ -2,12 +2,12 @@
 * Project Title: “Customer Check In Prediction”
 * Project Mangement Methodology used: CRISP ML (Q)
 * Scope of the Project: In this Business Problem, based on the past hotel booking information details of the customer i.e., dataset given by the client, using the data  analysis & visualization, data wrangling & build the model that predicts the customer who is going to be check in to the hotel room.
+*********************************************************************************************************************************************************************** 
 * Step (1) - Business Understanding & Data Understanding:
 * Business Objective: To predict whether customer will check in to the Hotel room or not.
 * Business Constriant: To choose most significant features.
-***********************************************************************************************************************************************************************
 * Data Collection & Data Types:   
-*           **Column**            **Count**     **Non-Null**       **Dtype**  
+*            **Column**           **Count**     **Non-Null**       **Dtype**  
           0   Unnamed: 0            82580         non-null           int64  
           1   ID                    82580         non-null           int64  
           2   Nationality           82580         non-null           object 
@@ -39,4 +39,10 @@
           28  SRNoAlcoholInMiniBar  82580         non-null           int64  
           29  SRQuietRoom           82580         non-null           int64  
            *  RangeIndex: 82580 entries, 0 to 82579, Data columns (total 30 columns)
-           *  dtypes: float64(3), int64(24), object(3)   
+           *  dtypes: float64(3), int64(24), object(3)
+***********************************************************************************************************************************************************************
+* Step (2) - Data Preprocessing/EDA/Feature Engineering:
+* Data Preprocessing:
+* 1) Dummy variable creation: Using Label Encoding
+* 2) Checking for zero variance features: With thresholdlimit=0
+* 3) Handling missing values: Used median imputation 
