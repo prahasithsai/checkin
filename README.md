@@ -1,5 +1,6 @@
 # checkin
 * Project Title: “Customer Check In Prediction”
+* Project Duration:3 Months
 * Project Mangement Methodology used: CRISP ML (Q)
 * Scope of the Project: In this Business Problem, based on the past hotel booking information details of the customer i.e., dataset given by the client, using the data  analysis & visualization, data wrangling & build the model that predicts the customer who is going to be check in to the hotel room.
 *********************************************************************************************************************************************************************** 
@@ -45,4 +46,24 @@
 * Data Preprocessing:
 * 1) Dummy variable creation: Using Label Encoding
 * 2) Checking for zero variance features: With thresholdlimit=0
-* 3) Handling missing values: Used median imputation 
+* 3) Handling missing values: Used median imputation
+* 4) Replacing negative values with '0'
+* 5) Scaling the input features using MinMax scaler
+* 6) Discretization/Bining/Grouping on target feature "is_checkedin" with two classes "Yes","No"
+* Feature Selection: Features are extracted using "KBest & Chi2" technique
+* EDA: Checked Muilticollinearity between input features using correlation matrix(heat map) & drop the correlated features
+***********************************************************************************************************************************************************************
+* Step (3) - Data Mining/Model Building & it's evaluation:
+* Splitted the dataset in 1) Training data set into a)Train data set(80%) b)Validation data set(20%) & 2)Test data set
+* Used Decision Tree Classifier Algorithm
+* Evaluation Metrics: Used Classification report,f1-score(On Train data: 1,Test Data:1(since training done around 82.5k observations))
+*********************************************************************************************************************************************************************** 
+* Step (4) - Model Deployment:
+* Created the model file in pickle format & done randomly on testing data points & after done the deployment   
+* Backend server: Flask,Frontend:HTML,CSS,Cloud Deployment:Heroku
+*********************************************************************************************************************************************************************** 
+* Step (5) - Attachments/Links
+* GitHub: https://github.com/prahasithsai/checkin
+* Heroku deployment:https://customerscheckin.herokuapp.com/
+* Used Libraries: pandas, numpy,matplotlib,seaborn,sklearn,flask.
+  
