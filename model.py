@@ -200,6 +200,3 @@ model = pickle.load(open('model.pkl','rb'))
 predicted_values = pd.DataFrame(data_test.iloc[0:1,:-1])
 output = [model.predict(predicted_values)]
 output
-
-
-data_train['Nationality'].value_counts()
