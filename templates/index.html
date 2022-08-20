@@ -16,9 +16,10 @@
             <h3 align = "center" style="color:red">Customer will not CheckIn to the Hotel Room!</h3> 
         {% endif %}
     {% endif %}
-     
+   <div class="grid-container-element"><hr>  
     <form action="/predict" method="POST">
-        <h3 align="center"><label for="Nationality">Nation of the Customer:</label></h3><h4 align="center"><select id="myTextBox1" name="Nationality">
+        <h3 align="center"><label for="Nationality">Nation of the Customer:</label></h3>
+        <h4 align="center"><select id="myTextBox1" name="Nationality">
             <option value="" disabled selected>Select Customer Country</option>
             <option value="0">ABW - Aruba</option>
             <option value="1">AGO - Angola</option>
@@ -209,6 +210,7 @@
             <option value="186">ZAF - South Africa</option>
             <option value="187">ZWE - Zimbabwe</option>   
         </select></h4>
+        
         <br>
         <h3 align="center"><label for = 'Age'>Customers Age:</label></h3><h4 align="center"><input step="0.5" min="1" max="200" type = 'number' id = 'myTextBox1' name = 'Age' style="height: 15px ; width: 300px;" placeholder="Enter Age in Years"></h4>
         <br>
@@ -245,6 +247,7 @@
         <br>
         <h4 align="center"><button>SUBMIT</button></h4>
     </form>
+   </div>
     
     
     
