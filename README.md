@@ -38,5 +38,5 @@
           27  SRAwayFromElevator    82580         non-null           int64  
           28  SRNoAlcoholInMiniBar  82580         non-null           int64  
           29  SRQuietRoom           82580         non-null           int64  
-           * RangeIndex: 82580 entries, 0 to 82579, Data columns (total 30 columns):
-           * dtypes: float64(3), int64(24), object(3)   
+           *  RangeIndex: 82580 entries, 0 to 82579, Data columns (total 30 columns)
+           *  dtypes: float64(3), int64(24), object(3)   
