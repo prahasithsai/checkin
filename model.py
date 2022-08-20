@@ -1,7 +1,7 @@
 # Import the required libraries
 import pandas as pd
-data_test = pd.read_csv(r'C:\Users\Sai\Downloads\test_data_evaluation_part2.csv')
-data_train = pd.read_csv(r'C:\Users\Sai\Downloads\train_data_evaluation_part_2.csv')
+data_test = pd.read_csv('test_data_evaluation_part2.csv')
+data_train = pd.read_csv('train_data_evaluation_part_2.csv')
 
 """Project Mangement Methodology: CRISP ML (Q) 
 
