@@ -5,11 +5,10 @@
 * Step (1) - Business Understanding & Data Understanding:
 * Business Objective: To predict whether customer will check in to the Hotel room or not.
 * Business Constriant: To choose most significant features.
-* Data Collection & Data Types:   
-* RangeIndex: 82580 entries, 0 to 82579
-* Data columns (total 30 columns):
- #   Column                Non-Null Count  Dtype  
----  ------                --------------  -----  
+***********************************************************************************************************************************************************************
+* Data Info:   
+* RangeIndex: 82580 entries, 0 to 82579, Data columns (total 30 columns):
+*    Column                Non-Null Count  Dtype  
  0   Unnamed: 0            82580 non-null  int64  
  1   ID                    82580 non-null  int64  
  2   Nationality           82580 non-null  object 
